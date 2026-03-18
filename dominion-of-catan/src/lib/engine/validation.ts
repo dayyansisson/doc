@@ -10,7 +10,8 @@ import type {
 	VictoryCardType,
 	AnyCard,
 	TreasureCard,
-	ResourceCard
+	ResourceCard,
+	ActionCardName
 } from './state.ts';
 import {
 	ATTACHMENT_CAPACITY,
@@ -253,7 +254,7 @@ export function validateBuyCard(
 	if (cardName === 'Duchy' && state.supply.victoryPiles.duchy <= 0) return 'Duchy pile empty';
 	if (cardName === 'Province' && state.supply.victoryPiles.province <= 0) return 'Province pile empty';
 	if (cardName in actionCosts) {
-		const remaining = state.supply.kingdomPiles.get(cardName as keyof typeof actionCosts);
+		const remaining = state.supply.kingdomPiles.get(cardName as ActionCardName);
 		if (!remaining || remaining <= 0) return `${cardName} pile empty`;
 	}
 

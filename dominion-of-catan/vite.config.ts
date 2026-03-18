@@ -16,10 +16,12 @@ export default defineConfig({
 			},
 			{
 				extends: true,
-				plugins: [sveltekit()],
+				resolve: {
+					conditions: ['browser']
+				},
 				test: {
 					name: 'client',
-					include: ['src/**/*.svelte.test.ts'],
+					include: ['src/**/*.component.test.ts'],
 					environment: 'happy-dom',
 					globals: true,
 					setupFiles: ['src/test-setup.ts']
