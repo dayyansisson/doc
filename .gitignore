@@ -1,0 +1,21 @@
+# Node
+node_modules/
+dominion-of-catan/node_modules/
+
+# SvelteKit
+dominion-of-catan/.svelte-kit/
+dominion-of-catan/build/
+dominion-of-catan/dist/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Playwright
+dominion-of-catan/test-results/
+dominion-of-catan/playwright-report/

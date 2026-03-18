@@ -1,0 +1,14 @@
+/* Inter — weights used: 400, 500, 600 */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+
+/* Inter Tight — weights used: 600, 700 */
+@import '@fontsource/inter-tight/600.css';
+@import '@fontsource/inter-tight/700.css';
+
+body {
+	font-family: var(--font-ui);
+	color: var(--text-primary);
+	background: var(--surface-primary);
+}
